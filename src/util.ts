@@ -1,11 +1,9 @@
 export function get<T>(valueOrGetValue: T | (() => T)): T {
-	return typeof valueOrGetValue === "function"
-		? (valueOrGetValue as () => T)()
-		: valueOrGetValue;
+	return typeof valueOrGetValue === 'function' ? (valueOrGetValue as () => T)() : valueOrGetValue;
 }
 
 export function getDPR(element: Element): number {
-	if (typeof window === "undefined") {
+	if (typeof window === 'undefined') {
 		return 1;
 	}
 	const win = element.ownerDocument.defaultView || window;

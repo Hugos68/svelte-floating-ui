@@ -5,8 +5,8 @@ import type {
 	Placement,
 	ReferenceElement,
 	Strategy,
-} from "@floating-ui/dom";
-import type { Action } from "svelte/action";
+} from '@floating-ui/dom';
+import type { Action } from 'svelte/action';
 
 type ValueOrGetValue<T> = T | (() => T);
 

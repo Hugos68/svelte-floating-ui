@@ -1,17 +1,15 @@
-import { computePosition } from "@floating-ui/dom";
-import type { UseFloatingOptions, UseFloatingReturn } from "./types.js";
-import { get, getDPR, roundByDPR } from "./util.js";
+import { computePosition } from '@floating-ui/dom';
+import type { UseFloatingOptions, UseFloatingReturn } from './types.js';
+import { get, getDPR, roundByDPR } from './util.js';
 
-export function useFloating(
-	options: UseFloatingOptions = {},
-): UseFloatingReturn {
+export function useFloating(options: UseFloatingOptions = {}): UseFloatingReturn {
 	/** Options */
 	const whileElementsMountedOption = options.whileElementsMounted;
 	const openOption = $derived(get(options.open) ?? true);
 	const middlewareOption = $derived(get(options.middleware));
 	const transformOption = $derived(get(options.transform) ?? true);
-	const placementOption = $derived(get(options.placement) ?? "bottom");
-	const strategyOption = $derived(get(options.strategy) ?? "absolute");
+	const placementOption = $derived(get(options.placement) ?? 'bottom');
+	const strategyOption = $derived(get(options.strategy) ?? 'absolute');
 
 	/** State */
 	let x = $state(0);
@@ -25,8 +23,8 @@ export function useFloating(
 	const floatingStyles = $derived.by(() => {
 		const initialStyles = {
 			position: strategy,
-			left: "0",
-			top: "0",
+			left: '0',
+			top: '0',
 		};
 
 		if (!floatingElement) {
@@ -41,7 +39,7 @@ export function useFloating(
 				...initialStyles,
 				transform: `translate(${xVal}px, ${yVal}px)`,
 				...(getDPR(floatingElement) >= 1.5 && {
-					willChange: "transform",
+					willChange: 'transform',
 				}),
 			};
 		}
@@ -76,7 +74,7 @@ export function useFloating(
 	}
 
 	function cleanup() {
-		if (typeof whileElementsMountedCleanup === "function") {
+		if (typeof whileElementsMountedCleanup === 'function') {
 			whileElementsMountedCleanup();
 			whileElementsMountedCleanup = undefined;
 		}
