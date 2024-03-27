@@ -4,4 +4,4 @@
 
 ### Minor Changes
 
-- cdba88f: Released library
+-   cdba88f: Released library
