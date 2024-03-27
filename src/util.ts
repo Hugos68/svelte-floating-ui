@@ -1,5 +1,7 @@
-export function get<T>(maybeFn: T | (() => T)): T {
-	return typeof maybeFn === "function" ? (maybeFn as () => T)() : maybeFn;
+export function get<T>(valueOrGetValue: T | (() => T)): T {
+	return typeof valueOrGetValue === "function"
+		? (valueOrGetValue as () => T)()
+		: valueOrGetValue;
 }
 
 export function getDPR(element: Element): number {
