@@ -1,5 +1,5 @@
 {
-	"name": "svelte-floating-ui",
+	"name": "@hugos68/svelte-floating-ui",
 	"version": "0.0.0",
 	"description": "",
 	"main": "dist/index.js",
