@@ -1,0 +1,20 @@
+{
+	"name": "svelte-floating-ui",
+	"version": "0.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"dev": "tsc -w",
+		"build": "tsc"
+	},
+	"author": "Hugo Korte",
+	"license": "MIT",
+	"type": "module",
+	"devDependencies": {
+		"svelte": "5.0.0-next.85",
+		"typescript": "^5.4.3"
+	},
+	"dependencies": {
+		"@floating-ui/dom": "^1.6.3"
+	}
+}
