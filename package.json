@@ -1,7 +1,7 @@
 {
-	"name": "svelte-floating-ui",
+	"name": "@hugos68/svelte-floating-ui",
 	"version": "0.1.0",
-	"description": "",
+	"description": "A Floating UI wrapper for Svelte",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
